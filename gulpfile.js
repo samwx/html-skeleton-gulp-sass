@@ -55,6 +55,7 @@ function scssTask(err) {
 			.pipe(plumber({
 				errorHandler: onError
 			}))
+      .pipe(sass())
 			.pipe(gulp.dest(css_path))
 			.pipe(livereload());
 }
